@@ -20,7 +20,7 @@ assign y = expression;
 | XOR | `xor_gate` |
 | XNOR | `xnor_gate` |
 
-Each gate folder contains the design, testbench, Makefile, and README. These examples are suitable for RTL practice, VLSI fundamentals, and GitHub portfolio demonstration.
+Each gate folder contains the design, testbench, Makefile, and README.
 
 ## Simulation Flow
 
