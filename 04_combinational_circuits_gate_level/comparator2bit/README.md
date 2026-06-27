@@ -1,32 +1,26 @@
-# 2-bit Comparator - Dataflow Modeling
+# Comparator2Bit - Gate-Level Modeling
 
-This directory contains a synthesizable Verilog implementation of a **2-bit Comparator** using dataflow modeling.
+## Description
+
+This design implements `comparator2bit` using Verilog gate-level modeling.
+
+The design file uses primitive gates and avoids dataflow `assign` statements.
 
 ## Files
 
 | File | Description |
 |---|---|
-| `comparator2bit.v` | RTL design |
-| `comparator2bit_tb.v` | Testbench with `$monitor` and FSDB dump |
-| `Makefile` | Synopsys VCS and Verdi flow |
+| `comparator2bit.v` | Gate-level design |
+| `comparator2bit_tb.v` | Testbench |
+| `Makefile` | VCS / Verdi simulation flow |
 
-## Modeling Style
-
-The design is written using continuous assignment statements and Boolean or conditional expressions.
-
-## Simulation Flow
-
-This project is set up for **Synopsys VCS** and **Verdi**.
+## Run
 
 ```bash
-make compile
-make run
-make waves
-make gui
-make clean
+make all
 ```
 
-The testbench generates `dump.fsdb`, which can be opened with:
+## Waveform
 
 ```bash
 make waves

@@ -1,7 +1,15 @@
-// Full Adder using dataflow modeling
-module full_adder(A, B, Cin, sum, Cout);
-    input A, B, Cin;
-    output sum, Cout;
-    assign sum = A ^ B ^ Cin;
-    assign Cout = (A & B) | (A & Cin) | (B & Cin);
+module full_adder(a, b, cin, s, cout);
+    input a, b, cin;
+    output s, cout;
+
+    wire w1, w2, w3;
+
+    xor xor1(w1, a, b);
+    xor xor2(s, w1, cin);
+
+    and and1(w2, a, b);
+    and and2(w3, w1, cin);
+
+    or or1(cout, w2, w3);
+
 endmodule

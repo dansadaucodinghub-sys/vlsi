@@ -1,32 +1,26 @@
-# Full Adder - Dataflow Modeling
+# Full Adder - Gate-Level Modeling
 
-This directory contains a synthesizable Verilog implementation of a **Full Adder** using dataflow modeling.
+## Description
+
+This design implements `full_adder` using Verilog gate-level modeling.
+
+The design file uses primitive gates and avoids dataflow `assign` statements.
 
 ## Files
 
 | File | Description |
 |---|---|
-| `full_adder.v` | RTL design |
-| `full_adder_tb.v` | Testbench with `$monitor` and FSDB dump |
-| `Makefile` | Synopsys VCS and Verdi flow |
+| `full_adder.v` | Gate-level design |
+| `full_adder_tb.v` | Testbench |
+| `Makefile` | VCS / Verdi simulation flow |
 
-## Modeling Style
-
-The design is written using continuous assignment statements and Boolean or conditional expressions.
-
-## Simulation Flow
-
-This project is set up for **Synopsys VCS** and **Verdi**.
+## Run
 
 ```bash
-make compile
-make run
-make waves
-make gui
-make clean
+make all
 ```
 
-The testbench generates `dump.fsdb`, which can be opened with:
+## Waveform
 
 ```bash
 make waves

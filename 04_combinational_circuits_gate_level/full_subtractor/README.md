@@ -1,32 +1,26 @@
-# Full Subtractor - Dataflow Modeling
+# Full Subtractor - Gate-Level Modeling
 
-This directory contains a synthesizable Verilog implementation of a **Full Subtractor** using dataflow modeling.
+## Description
+
+This design implements `full_subtractor` using Verilog gate-level modeling.
+
+The design file uses primitive gates and avoids dataflow `assign` statements.
 
 ## Files
 
 | File | Description |
 |---|---|
-| `full_subtractor.v` | RTL design |
-| `full_subtractor_tb.v` | Testbench with `$monitor` and FSDB dump |
-| `Makefile` | Synopsys VCS and Verdi flow |
+| `full_subtractor.v` | Gate-level design |
+| `full_subtractor_tb.v` | Testbench |
+| `Makefile` | VCS / Verdi simulation flow |
 
-## Modeling Style
-
-The design is written using continuous assignment statements and Boolean or conditional expressions.
-
-## Simulation Flow
-
-This project is set up for **Synopsys VCS** and **Verdi**.
+## Run
 
 ```bash
-make compile
-make run
-make waves
-make gui
-make clean
+make all
 ```
 
-The testbench generates `dump.fsdb`, which can be opened with:
+## Waveform
 
 ```bash
 make waves

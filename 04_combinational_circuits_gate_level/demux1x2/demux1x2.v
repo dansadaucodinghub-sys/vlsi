@@ -1,7 +1,11 @@
-// 1x2 DEMUX using dataflow modeling
 module demux1x2(d, sel, y0, y1);
     input d, sel;
     output y0, y1;
-    assign y0 = (sel == 1'b0) ? d : 1'b0;
-    assign y1 = (sel == 1'b1) ? d : 1'b0;
+
+    wire nsel;
+
+    not not1(nsel, sel);
+    and and1(y0, d, nsel);
+    and and2(y1, d, sel);
+
 endmodule

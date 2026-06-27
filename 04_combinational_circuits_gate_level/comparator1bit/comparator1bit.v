@@ -1,8 +1,13 @@
-// 1-bit Comparator using dataflow modeling
-module comparator1bit(A, B, gt, eq, lt);
-    input A, B;
+module comparator1bit(a, b, gt, eq, lt);
+    input a, b;
     output gt, eq, lt;
-    assign gt = A & ~B;
-    assign eq = ~(A ^ B);
-    assign lt = ~A & B;
+
+    wire na, nb;
+
+    not  not1(na, a);
+    not  not2(nb, b);
+    and  and1(gt, a, nb);
+    xnor xnor1(eq, a, b);
+    and  and2(lt, na, b);
+
 endmodule

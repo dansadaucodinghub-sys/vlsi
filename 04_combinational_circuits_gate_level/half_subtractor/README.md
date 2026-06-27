@@ -1,32 +1,26 @@
-# Half Subtractor - Dataflow Modeling
+# Half Subtractor - Gate-Level Modeling
 
-This directory contains a synthesizable Verilog implementation of a **Half Subtractor** using dataflow modeling.
+## Description
+
+This design implements `half_subtractor` using Verilog gate-level modeling.
+
+The design file uses primitive gates and avoids dataflow `assign` statements.
 
 ## Files
 
 | File | Description |
 |---|---|
-| `half_subtractor.v` | RTL design |
-| `half_subtractor_tb.v` | Testbench with `$monitor` and FSDB dump |
-| `Makefile` | Synopsys VCS and Verdi flow |
+| `half_subtractor.v` | Gate-level design |
+| `half_subtractor_tb.v` | Testbench |
+| `Makefile` | VCS / Verdi simulation flow |
 
-## Modeling Style
-
-The design is written using continuous assignment statements and Boolean or conditional expressions.
-
-## Simulation Flow
-
-This project is set up for **Synopsys VCS** and **Verdi**.
+## Run
 
 ```bash
-make compile
-make run
-make waves
-make gui
-make clean
+make all
 ```
 
-The testbench generates `dump.fsdb`, which can be opened with:
+## Waveform
 
 ```bash
 make waves

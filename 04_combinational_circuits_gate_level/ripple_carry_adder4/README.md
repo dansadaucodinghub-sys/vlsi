@@ -1,32 +1,26 @@
-# 4-bit Ripple Carry Adder - Dataflow Modeling
+# Ripple Carry Adder4 - Gate-Level Modeling
 
-This directory contains a synthesizable Verilog implementation of a **4-bit Ripple Carry Adder** using dataflow modeling.
+## Description
+
+This design implements `ripple_carry_adder4` using Verilog gate-level modeling.
+
+The design file uses primitive gates and avoids dataflow `assign` statements.
 
 ## Files
 
 | File | Description |
 |---|---|
-| `ripple_carry_adder4.v` | RTL design |
-| `ripple_carry_adder4_tb.v` | Testbench with `$monitor` and FSDB dump |
-| `Makefile` | Synopsys VCS and Verdi flow |
+| `ripple_carry_adder4.v` | Gate-level design |
+| `ripple_carry_adder4_tb.v` | Testbench |
+| `Makefile` | VCS / Verdi simulation flow |
 
-## Modeling Style
-
-The design is written using continuous assignment statements and Boolean or conditional expressions.
-
-## Simulation Flow
-
-This project is set up for **Synopsys VCS** and **Verdi**.
+## Run
 
 ```bash
-make compile
-make run
-make waves
-make gui
-make clean
+make all
 ```
 
-The testbench generates `dump.fsdb`, which can be opened with:
+## Waveform
 
 ```bash
 make waves

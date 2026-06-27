@@ -1,17 +1,20 @@
 module half_subtractor_tb;
-    reg A, B;
-    wire diff, borrow;
-    half_subtractor dut(A, B, diff, borrow);
-    initial begin
-        $monitor("A=%0d, B=%0d, diff=%0d, borrow=%0d", A, B, diff, borrow);
-        A = 0; B = 0;
-        #2 A = 0; B = 1;
-        #2 A = 1; B = 0;
-        #2 A = 1; B = 1;
-        #2 $finish;
-    end
+    reg a, b;
+    wire d, borrow;
+
+    half_subtractor dut(a, b, d, borrow);
+
     initial begin
         $fsdbDumpfile("dump.fsdb");
         $fsdbDumpvars(0, half_subtractor_tb);
+    end
+
+    initial begin
+        $monitor("time=%0t a=%b b=%b d=%b borrow=%b", $time, a, b, d, borrow);
+        a=0; b=0; #2;
+        a=0; b=1; #2;
+        a=1; b=0; #2;
+        a=1; b=1; #2;
+        $finish;
     end
 endmodule

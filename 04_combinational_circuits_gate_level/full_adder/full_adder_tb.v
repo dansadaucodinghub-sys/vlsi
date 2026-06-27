@@ -1,21 +1,24 @@
 module full_adder_tb;
-    reg A, B, Cin;
-    wire sum, Cout;
-    full_adder dut(A, B, Cin, sum, Cout);
-    initial begin
-        $monitor("A=%0d, B=%0d, Cin=%0d, sum=%0d, Cout=%0d", A, B, Cin, sum, Cout);
-        A = 0; B = 0; Cin = 0;
-        #2 A = 0; B = 0; Cin = 1;
-        #2 A = 0; B = 1; Cin = 0;
-        #2 A = 0; B = 1; Cin = 1;
-        #2 A = 1; B = 0; Cin = 0;
-        #2 A = 1; B = 0; Cin = 1;
-        #2 A = 1; B = 1; Cin = 0;
-        #2 A = 1; B = 1; Cin = 1;
-        #2 $finish;
-    end
+    reg a, b, cin;
+    wire s, cout;
+
+    full_adder dut(a, b, cin, s, cout);
+
     initial begin
         $fsdbDumpfile("dump.fsdb");
         $fsdbDumpvars(0, full_adder_tb);
+    end
+
+    initial begin
+        $monitor("time=%0t a=%b b=%b cin=%b s=%b cout=%b", $time, a, b, cin, s, cout);
+        a=0; b=0; cin=0; #2;
+        a=0; b=0; cin=1; #2;
+        a=0; b=1; cin=0; #2;
+        a=0; b=1; cin=1; #2;
+        a=1; b=0; cin=0; #2;
+        a=1; b=0; cin=1; #2;
+        a=1; b=1; cin=0; #2;
+        a=1; b=1; cin=1; #2;
+        $finish;
     end
 endmodule

@@ -1,7 +1,8 @@
-// Half Adder using dataflow modeling
-module half_adder(A, B, sum, carry);
-    input A, B;
-    output sum, carry;
-    assign sum = A ^ B;
-    assign carry = A & B;
+module half_adder(a, b, s, c);
+    input a, b;
+    output s, c;
+
+    xor xor1(s, a, b);
+    and and1(c, a, b);
+
 endmodule

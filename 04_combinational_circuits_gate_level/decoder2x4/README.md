@@ -1,32 +1,26 @@
-# 2x4 Decoder - Dataflow Modeling
+# Decoder2X4 - Gate-Level Modeling
 
-This directory contains a synthesizable Verilog implementation of a **2x4 Decoder** using dataflow modeling.
+## Description
+
+This design implements `decoder2x4` using Verilog gate-level modeling.
+
+The design file uses primitive gates and avoids dataflow `assign` statements.
 
 ## Files
 
 | File | Description |
 |---|---|
-| `decoder2x4.v` | RTL design |
-| `decoder2x4_tb.v` | Testbench with `$monitor` and FSDB dump |
-| `Makefile` | Synopsys VCS and Verdi flow |
+| `decoder2x4.v` | Gate-level design |
+| `decoder2x4_tb.v` | Testbench |
+| `Makefile` | VCS / Verdi simulation flow |
 
-## Modeling Style
-
-The design is written using continuous assignment statements and Boolean or conditional expressions.
-
-## Simulation Flow
-
-This project is set up for **Synopsys VCS** and **Verdi**.
+## Run
 
 ```bash
-make compile
-make run
-make waves
-make gui
-make clean
+make all
 ```
 
-The testbench generates `dump.fsdb`, which can be opened with:
+## Waveform
 
 ```bash
 make waves

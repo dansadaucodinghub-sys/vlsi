@@ -1,32 +1,26 @@
-# 1x2 Demultiplexer - Dataflow Modeling
+# Demux1X2 - Gate-Level Modeling
 
-This directory contains a synthesizable Verilog implementation of a **1x2 Demultiplexer** using dataflow modeling.
+## Description
+
+This design implements `demux1x2` using Verilog gate-level modeling.
+
+The design file uses primitive gates and avoids dataflow `assign` statements.
 
 ## Files
 
 | File | Description |
 |---|---|
-| `demux1x2.v` | RTL design |
-| `demux1x2_tb.v` | Testbench with `$monitor` and FSDB dump |
-| `Makefile` | Synopsys VCS and Verdi flow |
+| `demux1x2.v` | Gate-level design |
+| `demux1x2_tb.v` | Testbench |
+| `Makefile` | VCS / Verdi simulation flow |
 
-## Modeling Style
-
-The design is written using continuous assignment statements and Boolean or conditional expressions.
-
-## Simulation Flow
-
-This project is set up for **Synopsys VCS** and **Verdi**.
+## Run
 
 ```bash
-make compile
-make run
-make waves
-make gui
-make clean
+make all
 ```
 
-The testbench generates `dump.fsdb`, which can be opened with:
+## Waveform
 
 ```bash
 make waves

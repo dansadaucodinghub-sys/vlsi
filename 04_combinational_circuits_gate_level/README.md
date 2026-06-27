@@ -1,22 +1,53 @@
-# Combinational Circuits Using Dataflow Modeling
+# Combinational Circuits - Gate-Level Modeling
 
-This package is intentionally included as a second dataflow combinational-circuit archive because the requested list contains **Combinational Circuit Using Data Flow Modeling** twice.
+This folder is a corrected replacement for `04_combinational_circuits_gate_level`.
 
-The content matches the main dataflow combinational circuit package and is organized for GitHub use with Synopsys VCS and Verdi.
+All design files use true Verilog gate-level modeling with primitive gates such as:
 
-## Simulation Flow
-
-This project is set up for **Synopsys VCS** and **Verdi**.
-
-```bash
-make compile
-make run
-make waves
-make gui
-make clean
+```verilog
+and
+or
+not
+xor
+xnor
 ```
 
-The testbench generates `dump.fsdb`, which can be opened with:
+The RTL design files do not use dataflow `assign` statements.
+
+## Included Circuits
+
+- mux2x1
+- mux4x1
+- demux1x2
+- demux1x4
+- encoder4x2
+- decoder2x4
+- comparator1bit
+- comparator2bit
+- half_adder
+- full_adder
+- half_subtractor
+- full_subtractor
+- ripple_carry_adder4
+
+## Folder Structure
+
+Each circuit folder contains:
+
+```text
+design.v
+testbench.v
+Makefile
+README.md
+```
+
+## Run Simulation
+
+```bash
+make all
+```
+
+## View Waveform
 
 ```bash
 make waves
