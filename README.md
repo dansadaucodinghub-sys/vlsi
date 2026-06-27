@@ -62,6 +62,7 @@ Makefile
 README.md
 ```
 ### Common Commands
+```text
 source /home/server2/verification.sh
 make all
 
@@ -91,7 +92,7 @@ all: compile run
 
 clean:
 	rm -rf csrc simv simv.daidir verdiLog novas* *.log *.vpd *.fsdb *.key DVEfiles ucli.key
-
+```
 ### Purpose
 
 This repository is intended to showcase foundational RTL design skills for VLSI and digital design, including:
