@@ -60,3 +60,50 @@ design.v
 testbench.v
 Makefile
 README.md
+```
+### Common Commands
+source /home/server2/verification.sh
+make all
+
+### Makefile Flow (Example)
+TOP = mux2x1_tb
+
+SRC = \
+ mux2x1.v \
+ mux2x1_tb.v
+
+VCS = vcs -full64 -sverilog
+VCS_OPTS = -debug_access+all -kdb -l compile.log
+
+compile:
+	$(VCS) $(VCS_OPTS) $(SRC)
+
+run:
+	./simv -l run.log
+
+gui:
+	verdi -sv $(SRC) -top $(TOP) &
+
+waves:
+	verdi -ssf dump.fsdb &
+
+all: compile run
+
+clean:
+	rm -rf csrc simv simv.daidir verdiLog novas* *.log *.vpd *.fsdb *.key DVEfiles ucli.key
+
+### Purpose
+
+This repository is intended to showcase foundational RTL design skills for VLSI and digital design, including:
+
+Clean Verilog coding
+Dataflow modeling
+Gate-level modeling
+Structural modeling
+Testbench creation
+VCS simulation
+FSDB waveform generation
+Verdi debugging flow
+
+### Author
+Prepared as part of my VLSI/RTL design learning and portfolio development.
