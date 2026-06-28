@@ -1,6 +1,6 @@
 # Seven Basic Logic Gates Using Dataflow Modeling
 
-This package contains clean Verilog RTL examples for the seven basic logic gates using **dataflow modeling**.
+This project contains clean Verilog RTL code for the seven basic logic gates using **dataflow modeling**.
 
 Dataflow modeling uses continuous assignment statements:
 
