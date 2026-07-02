@@ -1,0 +1,29 @@
+# decoder2x4_behavioral
+
+## Description
+
+Combinational circuit implemented using behavioral Verilog.
+
+## Modeling Style
+
+Behavioral modeling.
+
+## Files
+
+| File | Description |
+|---|---|
+| `decoder2x4_behavioral.v` | Verilog design |
+| Testbench file | Verilog testbench |
+| `Makefile` | VCS/Verdi simulation flow |
+
+## Run
+
+```bash
+make all
+```
+
+## View Waveform
+
+```bash
+make waves
+```
