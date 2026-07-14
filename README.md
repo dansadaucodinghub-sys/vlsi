@@ -7,14 +7,13 @@ The goal of this repository is to demonstrate clean RTL coding style, testbench 
 
 ## Repository Contents
 
+
 | Folder | Description |
 |---|---|
-| `01_logic_gates_dataflow` | Seven basic logic gates using dataflow modeling |
-| `02_combinational_circuits_dataflow` | Common combinational circuits using dataflow modeling |
-| `03_logic_gates_gate_level` | Seven basic logic gates using Verilog primitive gates |
-| `04_combinational_circuits_gate_level` | Common combinational circuits using gate-level modeling |
-| `05_combinational_circuits_structural` | Hierarchical circuits built using module instantiation |
-
+| `dataflow_modelling` | Seven Basic Logic Gates, Common combinational circuits using dataflow modeling |
+| `gate_level_modelling` | Seven basic logic gates, common combinational circuits using Verilog primitive gates |
+| `structural_modelling` | Some combinational circuits using structural modeling |
+| `behavioral_modeling` | Seven basic, Common combinational circuit and sequential circuits using behavioral model |
 ## Design Categories
 
 ### Logic Gates
