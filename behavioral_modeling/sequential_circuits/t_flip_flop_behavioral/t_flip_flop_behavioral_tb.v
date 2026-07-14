@@ -5,11 +5,6 @@ module t_flip_flop_behavioral_tb;
     t_flip_flop_behavioral dut(clk, rst, t, q);
 
     initial begin
-        $fsdbDumpfile("dump.fsdb");
-        $fsdbDumpvars(0, t_flip_flop_behavioral_tb);
-    end
-
-    initial begin
         clk = 0;
         forever #1 clk = ~clk;
     end
@@ -24,4 +19,8 @@ module t_flip_flop_behavioral_tb;
 
         $finish;
     end
-endmodule
+    initial begin
+	$dumpfile("wave.vcd");
+	$dumpvars(0, t_flip_flop_behavioral_tb);
+    end
+  endmodule

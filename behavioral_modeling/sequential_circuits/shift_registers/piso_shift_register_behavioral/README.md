@@ -1,8 +1,8 @@
-# shift_register4bit_behavioral
+# piso_shift_register_behavioral
 
 ## Description
 
-Sequential circuit implemented using clocked behavioral Verilog.
+4-bit parallel-in serial-out shift register with load control.
 
 ## Modeling Style
 
@@ -12,8 +12,8 @@ Behavioral modeling.
 
 | File | Description |
 |---|---|
-| `shift_register4bit_behavioral.v` | Verilog design |
-| Testbench file | Verilog testbench |
+| `piso_shift_register_behavioral.v` | Verilog design |
+| `piso_shift_register_behavioral_tb.v` | Verilog testbench |
 | `Makefile` | VCS/Verdi simulation flow |
 
 ## Run

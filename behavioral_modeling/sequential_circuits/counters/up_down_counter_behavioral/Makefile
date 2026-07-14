@@ -1,8 +1,8 @@
-TOP = shift_register4bit_behavioral_tb
+TOP = up_down_counter_behavioral_tb
 
 SRC = \
-	shift_register4bit_behavioral.v\
-	shift_register4bit_behavioral_tb.v
+	up_down_counter_behavioral.v\
+	up_down_counter_behavioral_tb.v
 
 VCS = vcs -full64 -sverilog
 VCS_OPTS = -debug_access+all -kdb -l compile.log
@@ -14,7 +14,7 @@ run:
 	./simv -l run.log
 
 gui:
-	verdi -sv -f filelist.f -top $(TOP) &
+	verdi -sv $(SRC) -top $(TOP) &
 
 waves:
 	verdi -ssf dump.fsdb &
@@ -33,4 +33,3 @@ clean:
 		*.fsdb \
 		*.key \
 		DVEfiles
-

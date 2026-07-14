@@ -5,11 +5,6 @@ module jk_flip_flop_behavioral_tb;
     jk_flip_flop_behavioral dut(clk, rst, j, k, q);
 
     initial begin
-        $fsdbDumpfile("dump.fsdb");
-        $fsdbDumpvars(0, jk_flip_flop_behavioral_tb);
-    end
-
-    initial begin
         clk = 0;
         forever #1 clk = ~clk;
     end
@@ -25,4 +20,8 @@ module jk_flip_flop_behavioral_tb;
 
         $finish;
     end
+	initial begin
+       	 $fsdbDumpfile("dump.fsdb");
+       	 $fsdbDumpvars(0, jk_flip_flop_behavioral_tb);
+	end
 endmodule
