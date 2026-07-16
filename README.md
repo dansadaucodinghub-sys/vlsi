@@ -1,9 +1,11 @@
 RTL/VLSI
 # Verilog RTL Design Portfolio
 
-This repository contains a structured collection of Verilog RTL designs for basic digital logic, combinational circuits, and hierarchical structural modeling.
+This repository contains a structured collection of Verilog RTL designs for basic digital logic, combinational circuit and sequential circuit and hierarchical structural modeling.
 
-The goal of this repository is to demonstrate clean RTL coding style, testbench development, Synopsys VCS simulation flow, FSDB waveform dumping, and Verdi waveform/debug usage.
+The repository contains four different but related abstraction levels, the data modeling, gate level modelling, structural modeling and behavioral modeling. 
+
+The goal of this repository is to demonstrate clean RTL coding style, testbench development, using synopsys VCS simulation flow, FSDB waveform dumping, and Verdi waveform/debug usage.
 
 ## Repository Contents
 
