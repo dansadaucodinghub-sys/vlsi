@@ -1,0 +1,21 @@
+Start time: 13:54:28 on Jul 29,2026
+qverilog enum.sv 
+-- Compiling module enum_data_type
+
+Top level modules:
+	enum_data_type
+# vsim -lib work work.enum_data_type -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** License Issue: License request for qhsimvl feature failed
+# ** License Issue: Invalid host. (C:\questasim64_10.7c\win64\LICENSE.TXT)
+# ** License Issue: Invalid host. (C:\questasim64_10.7c\win64\LICENSE.TXT)
+# ** License Issue: Invalid host. (C:\questasim64_10.7c\win64\LICENSE.TXT)
+# ** License Issue: Invalid host. (C:\questasim64_10.7c\win64\LICENSE.TXT)
+# ** License Issue: Invalid host. (C:\questasim64_10.7c\win64\LICENSE.TXT)
+# ** License Issue: Invalid host. (C:\questasim64_10.7c\win64\LICENSE.TXT)
+# ** License Issue: Invalid host. (C:\questasim64_10.7c\win64\LICENSE.TXT)
+# ** License Issue: Cannot find license file. (C:\flexlm\license.dat)
+# ** Error: Failure to obtain a Verilog simulation license. Unable to checkout any of these license features: 'qhsimvl' or 'msimhdlsim'.
+# Error loading design
+# End time: 13:55:19 on Jul 29,2026, Elapsed time: 0:00:51
+# Errors: 0, Warnings: 0

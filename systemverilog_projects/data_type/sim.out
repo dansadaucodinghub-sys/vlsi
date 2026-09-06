@@ -1,0 +1,47 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_0000026148572a40 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000026148572bd0 .scope module, "def_val" "def_val" 3 1;
+ .timescale 0 0;
+v000002614855bea0_0 .var/2s "a", 31 0;
+v000002614855bf40_0 .var/i "b", 31 0;
+v000002614855ef20_0 .var/2s "c", 15 0;
+v0000026148572d60_0 .var/2s "d", 63 0;
+v0000026148572e00_0 .var/2u "e", 0 0;
+v00000261485a3dc0_0 .var/2s "f", 7 0;
+v00000261485a3e60_0 .var "g", 0 0;
+v00000261485a3f00_0 .var "h", 0 0;
+o00000261485a7158 .functor BUFZ 1, C4<z>; HiZ drive
+v00000261485a3fa0_0 .net "i", 0 0, o00000261485a7158;  0 drivers
+v00000261485a40d0_0 .var "j", 63 0;
+v00000261485a4170_0 .var "k", 0 0;
+    .scope S_0000026148572bd0;
+T_0 ;
+    %vpi_call/w 3 17 "$display", "the default value of int is %0d", v000002614855bea0_0 {0 0 0};
+    %vpi_call/w 3 18 "$display", "the default value of integer is %0d", v000002614855bf40_0 {0 0 0};
+    %vpi_call/w 3 19 "$display", "the default value of shortint is %0d", v000002614855ef20_0 {0 0 0};
+    %vpi_call/w 3 20 "$display", "the default value of longint is %0d", v0000026148572d60_0 {0 0 0};
+    %vpi_call/w 3 21 "$display", "the default value of bit is %0d", v0000026148572e00_0 {0 0 0};
+    %vpi_call/w 3 22 "$display", "the default value of byte is %0d", v00000261485a3dc0_0 {0 0 0};
+    %vpi_call/w 3 23 "$display", "the default value of logic is %0d", v00000261485a3e60_0 {0 0 0};
+    %vpi_call/w 3 24 "$display", "the default value of reg is %0d", v00000261485a3f00_0 {0 0 0};
+    %vpi_call/w 3 25 "$display", "the default value of wire is %0d", v00000261485a3fa0_0 {0 0 0};
+    %vpi_call/w 3 26 "$display", "the default value of time is %0d", v00000261485a40d0_0 {0 0 0};
+    %vpi_call/w 3 27 "$display", "the default value of logic is %0d", v00000261485a4170_0 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "data_type.sv";

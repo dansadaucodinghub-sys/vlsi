@@ -1,0 +1,39 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_0000015288b43020 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000015288b2a500 .scope module, "enum_data_type" "enum_data_type" 3 1;
+ .timescale 0 0;
+enum0000015288b764f0 .enum2/s (32)
+   "Jan" 0,
+   "Feb" 1,
+   "Mar" 2,
+   "Apr" 3,
+   "May" 4,
+   "Jun" 5,
+   "Jul" 6,
+   "Aug" 7,
+   "Sept" 8,
+   "Oct" 9,
+   "Nov" 10,
+   "Dec" 11
+ ;
+    .scope S_0000015288b2a500;
+T_0 ;
+    %vpi_call/w 3 4 "$display", "first month of the year is: %0d", 32'sb00000000000000000000000000000000 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "enum.sv";

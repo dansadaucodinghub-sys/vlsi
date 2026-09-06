@@ -1,0 +1,43 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Lenovo L13/Desktop/VLSI/projects/systemverilog/enum
+T_opt
+!s110 1785329685
+VQeZDDGK51WVQGCTERdX>a0
+04 14 4 work enum_data_type fast 0
+=1-98fa9b7bbe21-6a69f814-3e-43c0
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+venum_data_type
+DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1785329669
+!i10b 1
+!s100 za2Y?D3CSgRVUM0O7n9kF2
+I:HdY_NF2:zJ`FYOf8?Pjo2
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 enum_sv_unit
+S1
+R0
+w1785329570
+8enum.sv
+Fenum.sv
+L0 1
+OL;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1785329668.000000
+!s107 enum.sv|
+!s90 enum.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
