@@ -1,0 +1,4 @@
+module mux2(input a,b,s, output y)
+
+
+endmodule
